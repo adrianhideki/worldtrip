@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import Swiper core and required modules
@@ -14,6 +14,7 @@ import SwiperCore, {
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/pagination/pagination.min.css";
+import CarouselItem from "./Item";
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard]);
@@ -30,166 +31,52 @@ const Carousel = () => {
           keyboard={true}
         >
           <SwiperSlide>
-            <Flex
-              backgroundImage="/northAmerica.jpg"
-              height="400"
-              width="100%"
-              flexDir="column"
-              alignItems="center"
-              justifyContent="center"
-              backgroundPosition="center"
-              backgroundSize="stretch"
-            >
-              <Text
-                color="white"
-                fontSize="3rem"
-                fontWeight="700"
-                textAlign="center"
-              >
-                América do Norte
-              </Text>
-              <Text
-                color="white"
-                fontSize="1.5rem"
-                fontWeight="700"
-                textAlign="center"
-              >
-                Reservas naturais e monumentos históricos à
-              </Text>
-              <Text
-                color="white"
-                fontSize="1.5rem"
-                fontWeight="700"
-                textAlign="center"
-              >
-                atmosfera urbana das metrópoles.
-              </Text>
-            </Flex>
+            <CarouselItem
+              image="/northAmerica.jpg"
+              title="América do Norte"
+              description="Reservas naturais e monumentos históricos"
+              path="/continents/north-america"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Flex
-              backgroundImage="/southAmerica.jpg"
-              height="400"
-              width="100%"
-              flexDir="column"
-              alignItems="center"
-              justifyContent="center"
-              backgroundPosition="center"
-              backgroundSize="stretch"
-            >
-              <Text
-                color="white"
-                fontSize="3rem"
-                fontWeight="700"
-                textAlign="center"
-              >
-                América do Sul
-              </Text>
-              <Text
-                color="white"
-                fontSize="1.5rem"
-                fontWeight="700"
-                textAlign="center"
-              >
-                Muitas belezas naturais
-              </Text>
-            </Flex>
+            <CarouselItem
+              image="/southAmerica.jpg"
+              title="América do Sul"
+              description="Muitas belezas naturais"
+              path="/continents/south-america"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Flex
-              backgroundImage="/asia.jpg"
-              height="400"
-              width="100%"
-              flexDir="column"
-              alignItems="center"
-              justifyContent="center"
-              backgroundPosition="center"
-              backgroundSize="stretch"
-            >
-              <Text color="white" fontSize="3rem" fontWeight="700">
-                Ásia
-              </Text>
-              <Text
-                color="white"
-                fontSize="1.5rem"
-                fontWeight="700"
-                textAlign="center"
-              >
-                O maior de todos os continentes.
-              </Text>
-            </Flex>
+            <CarouselItem
+              image="/asia.jpg"
+              title="Ásia"
+              description="O maior de todos os continentes."
+              path="/continents/asia"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Flex
-              backgroundImage="/africa.jpg"
-              height="400"
-              width="100%"
-              flexDir="column"
-              alignItems="center"
-              justifyContent="center"
-              backgroundPosition="center"
-              backgroundSize="stretch"
-            >
-              <Text color="white" fontSize="3rem" fontWeight="700">
-                África
-              </Text>
-              <Text
-                color="white"
-                fontSize="1.5rem"
-                fontWeight="700"
-                textAlign="center"
-              >
-                De praias à safaris, um panorama para sua próxima viagem.
-              </Text>
-            </Flex>
+            <CarouselItem
+              image="/africa.jpg"
+              title="África"
+              description="De praias à safaris, um panorama para sua próxima viagem."
+              path="/continents/africa"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Flex
-              backgroundImage="/europaSlide.png"
-              height="400"
-              width="100%"
-              flexDir="column"
-              alignItems="center"
-              justifyContent="center"
-              backgroundPosition="center"
-              backgroundSize="stretch"
-            >
-              <Text color="white" fontSize="3rem" fontWeight="700">
-                Europa
-              </Text>
-              <Text
-                color="white"
-                fontSize="1.5rem"
-                fontWeight="700"
-                textAlign="center"
-              >
-                Também chamada de Velho Mundo.
-              </Text>
-            </Flex>
+            <CarouselItem
+              image="/europaSlide.png"
+              title="Europa"
+              description="Também chamada de Velho Mundo."
+              path="/continents/europe"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Flex
-              backgroundImage="/oceania.jpg"
-              backgroundPosition="center"
-              backgroundSize="stretch"
-              height="400"
-              width="100%"
-              flexDir="column"
-              alignItems="center"
-              justifyContent="center"
-            >
-              <Text color="white" fontSize="3rem" fontWeight="700">
-                Oceania
-              </Text>
-              <Text
-                color="white"
-                fontSize="1.5rem"
-                fontWeight="700"
-                textAlign="center"
-              >
-                Clima tropical e milhares de ilhas paradisíacas.
-              </Text>
-            </Flex>
+            <CarouselItem
+              image="/oceania.jpg"
+              title="Oceania"
+              description="Clima tropical e milhares de ilhas paradisíacas."
+              path="/continents/oceania"
+            />
           </SwiperSlide>
         </Swiper>
       </Flex>
