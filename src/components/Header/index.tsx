@@ -16,7 +16,7 @@ const Header = () => {
       h="100px"
       align="center"
       justify="flex-end"
-      mb="5"
+      mb="1"
     >
       <Flex flex="1" justify="center" align="center">
         <Link href="/">
