@@ -22,7 +22,7 @@ SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard]);
 const Carousel = () => {
   return (
     <Flex pb="8" justifyContent="center">
-      <Flex maxWidth="1240px" minW="100px">
+      <Flex width="1280px" minW="100px">
         <Swiper
           cssMode={true}
           navigation={true}

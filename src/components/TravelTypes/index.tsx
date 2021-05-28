@@ -4,13 +4,13 @@ import ImageLabel from "../ImageLabel";
 
 const TravelType = () => {
   return (
-    <Flex justify="center" mb="8">
+    <Flex justify="center" my="8">
       <SimpleGrid
-        minChildWidth="150px"
+        columns={[3,3,3,5]}
         spacing="5"
         align="center"
-        justifyContent="center"
-        width="80%"
+        width="100%"
+        justifyContent="space-between"
       >
         <ImageLabel label="vida noturna" image="/cocktail.svg" />
         <ImageLabel label="praia" image="/surf.svg" />

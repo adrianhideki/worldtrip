@@ -25,9 +25,16 @@ const Header = () => {
           </a>
         </Link>
       </Flex>
-      <Flex justify="flex-end" align="center">
+      <Flex display="inline" align="center" position="absolute" left="auto">
         <Icon as={colorMode === "dark" ? FaSun : FaMoon} mr="5" />
-        <Switch id="dark-theme" onChange={toggleColorMode} mr="5" />
+        <Switch
+          size="md"
+          colorScheme="cyan.200"
+          isChecked={colorMode === "dark"}
+          id="dark-theme"
+          onChange={toggleColorMode}
+          mr="5"
+        />
       </Flex>
     </Flex>
   );

@@ -8,6 +8,7 @@ import {
   SimpleGrid,
   Stack,
   Text,
+  Tooltip,
 } from "@chakra-ui/react";
 import Banner from "../../components/Banner";
 import CountText from "../../components/CountText";
@@ -50,14 +51,24 @@ const Continent = ({ data }: ContinentProps) => {
             {data.description}
           </Text>
           <Flex flex="1" justify="center">
-            <SimpleGrid columns={[1, 1, 1, 2, 3]} spacing="10">
+            <SimpleGrid columns={[1, 1, 1, 2, 3]} spacing="6">
               <CountText count={data.countryCount} description="países" />
               <CountText count={data.languageCount} description="línguas" />
-              <CountText count={data.cityCount} description="cidades +100" />
+              <CountText
+                count={data.cityCount}
+                description={
+                  <Tooltip
+                    label="The 100 Most Popular City Destinations"
+                    aria-label="A tooltip"
+                  >
+                    cidades +100
+                  </Tooltip>
+                }
+              />
             </SimpleGrid>
           </Flex>
         </SimpleGrid>
-        <Heading py="10">Cidades + 100</Heading>
+        <Heading py="10">Cidades +100</Heading>
         <SimpleGrid
           columns={[1, 1, 2, 3, 4]}
           spacing="10"

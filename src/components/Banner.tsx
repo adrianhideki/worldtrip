@@ -4,9 +4,9 @@ import { Box, Flex, HStack, Text } from "@chakra-ui/react";
 type BannerProps = {
   bannerImage?: string;
   title: string;
-}
+};
 
-const Banner = ({ bannerImage, title} : BannerProps) => {
+const Banner = ({ bannerImage, title }: BannerProps) => {
   return (
     <Flex>
       <Flex
@@ -23,11 +23,12 @@ const Banner = ({ bannerImage, title} : BannerProps) => {
           backgroundImage="linear-gradient(to bottom, #00000053, #00000088)"
           display="flex"
           flex="1"
-          alignItems="flex-end"
         >
-          <Text color="white" fontSize="3rem" fontWeight="600" mb="5" ml="10">
-            {title}
-          </Text>
+          <Flex flex="1" alignItems="flex-end" maxWidth="1280px" mx="auto">
+            <Text color="white" fontSize="3rem" fontWeight="600" mb="5" ml="20">
+              {title}
+            </Text>
+          </Flex>
         </Box>
       </Flex>
     </Flex>

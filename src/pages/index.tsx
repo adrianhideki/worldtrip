@@ -12,13 +12,17 @@ export default function Home() {
         <title>Home | worldtrip</title>
       </Head>
       <main>
-        <Stack spacing="10" justifyContent="center">
-          <Image src="/banner.png" alt="viajar" width="100%" height="auto" />
+        <Image src="/banner.png" alt="viajar" width="100%" height="auto" />
+        <Stack spacing="10" justifyContent="center" maxWidth="1280px" mx="auto">
           <TravelType />
           <Divider />
           <Flex align="center" flexDir="column">
-            <Text fontSize="36px" display="flex" as="div">Vamos Nessa?</Text>
-            <Text fontSize="36px" display="flex" as="div">Escolha seu continente</Text>
+            <Text fontSize="36px" display="flex" as="div">
+              Vamos Nessa?
+            </Text>
+            <Text fontSize="36px" display="flex" as="div">
+              Escolha seu continente
+            </Text>
           </Flex>
           <Carousel />
         </Stack>
