@@ -92,13 +92,6 @@ const Continent = ({ data }: ContinentProps) => {
 
 export default Continent;
 
-// export async function getStaticPaths() {
-//   return {
-//     paths: [],
-//     fallback: "blocking", // See the "fallback" section below
-//   };
-// }
-
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const response = await http.get(`/continents?name=${context.params.id}`);
 
