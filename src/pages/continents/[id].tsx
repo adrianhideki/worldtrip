@@ -94,9 +94,7 @@ export default Continent;
 
 export async function getStaticPaths() {
   return {
-    paths: [
-      { params: { id: "asia" } }, // See the "paths" section below
-    ],
+    paths: [],
     fallback: "blocking", // See the "fallback" section below
   };
 }
