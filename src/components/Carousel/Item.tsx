@@ -24,7 +24,7 @@ const CarouselItem = ({
       alignItems="center"
       justifyContent="center"
       backgroundPosition="center"
-      backgroundSize="stretch"
+      backgroundSize="cover"
     >
       <Link href={path}>
         <a>
